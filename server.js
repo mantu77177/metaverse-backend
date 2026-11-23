@@ -3349,7 +3349,7 @@ const start = async () => {
     console.warn("Cache warmup failed:", e.message);
   }
 
-  const server = app.listen(PORT, () => {
+  const server = app.listen(PORT,"0.0.0.0",() => {
     console.log(`Backend: http://localhost:${PORT}`);
     console.log(`Environment: ${process.env.NODE_ENV}`);
     console.log(`Cloudinary: ${process.env.CLOUDINARY_CLOUD_NAME}`);
